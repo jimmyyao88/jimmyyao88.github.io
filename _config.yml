@@ -1,1 +1,39 @@
-baseurl: /Jimme
+# folder settings
+source: .
+destination: ./_site
+
+# site settings
+permalink: /:categories/:title
+markdown: redcarpet
+
+# markdown engine
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "lax_spacing", "strikethrough", "superscript"]
+
+# site url
+url: saito.im
+
+# Focus domain name to site.url, used for CloudFront production only
+# prod: true
+prod: true
+
+# used by images inserted in posts
+file: http://f.cl.ly/items
+
+# custom vars, most of them are used by index.xml
+name: Saito
+full-name: Saito Wu
+email: saitowu@gmail.com
+slogan: worstest coder ever.
+twitter: SaitoWu
+
+# fire up a localhost and auto generate when files change
+serve: ture
+port: 4321
+
+# exclude files for generated site
+exclude:
+- README.md
+- LICENSE
+- Rakefile
+

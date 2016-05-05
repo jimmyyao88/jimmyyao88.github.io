@@ -1,12 +1,67 @@
-　　<!DOCTYPE html>
-　　<html>
-　　<head>
-　　　　<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-　　　　<title>{{ page.title }}</title>
-　　</head>
-　　<body>
+<!DOCTYPE html>
 
-　　　　{{ content }}
+<meta charset="utf-8" />
+<meta name=viewport content="width=device-width, initial-scale=1.0">
 
-　　</body>
-　　</html>
+<link rel=alternate href=/feed/ type=application/atom+xml>
+<link rel=stylesheet href=/css/a.css>
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Arvo:regular,bold">
+
+<title>{% if page.title != 'Saito' %}{{ site.name }} - {% endif %}{{ page.title }}</title>
+
+{% if page.title == 'Saito' %}
+<header>
+	<h2>Welcome to <a href={% if site.prod %}//{{ site.url }}{% endif %}/>X</a></h2>
+	<h1 lang=en><a href={% if site.prod %}//{{ site.url }}{% endif %}/ rel=home accesskey=x style="font-size:36px;">worst coder ever</a></h1>
+</header>
+{% endif %}
+
+<nav>
+	{% if page.title == 'Saito' %}
+		<h2>Get Started Here</h2>
+	{% else %}
+		<h2>&lt; <a href=/ rel=home accesskey=x>Back to Home</a></h2>
+	{% endif %}
+	<ul>
+		<li{% if page.permalink == '/work/' or page.category == 'work' %} class=current{% endif %}><a href=/work/>Work ／ ワーク ／ 作品</a></li>
+		<li{% if page.permalink == '/note/' or page.category == 'note' %} class=current{% endif %}><a href=/note/>Note ／ ノート ／ 筆記</a></li>
+		<li{% if page.permalink == '/about/' or page.category == 'about' %} class=current{% endif %}><a href=/about/>About ／ について ／ 關於</a></li>
+	</ul>
+</nav>
+
+{{ content }}
+
+{% if page.category == "work" or page.category == "note" %}
+<nav>
+{% if page.previous.url %}
+	<p><a class="nav" href={% if site.prod %}//{{ site.url }}{% endif %}{{ page.previous.url }}/>{{ page.previous.title }}</a>
+{% else %}
+	<p>You're reading my first post
+{% endif %}
+:Previous | Next:
+{% if page.next.url %}
+	<a class="nav" href={% if site.prod %}//{{ site.url }}{% endif %}{{ page.next.url }}/>{{ page.next.title }}</a> &gt;</p>
+{% else %}
+	You're viewing the latest post</p>
+{% endif %}
+</nav>
+{% endif %}
+
+<footer>
+	<p class=c><a href=http://twitter.com/{{ site.twitter }}>{{ site.name }}</a> feat. (<a href=/feed/ title="Feed - Atom (The Atom Syndication Format)">Atom</a>)</p>
+</footer>
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-17764376-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+

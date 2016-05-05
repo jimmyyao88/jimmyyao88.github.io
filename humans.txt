@@ -1,0 +1,19 @@
+---
+---
+
+/* TEAM */
+	God: Saito Wu
+	Contact: SaitoWu@gmail.com
+	Twitter: @SaitoWu
+	From: HangZhou, China
+
+/* THANKS */
+	Tunghsiao Liu
+
+/* SITE */
+	Last update: {{ site.time | date: "%Y/%m/%d" }}
+	Language: English / Chinese / Japanese
+	Software: Gedit
+
+/* humanstxt.org */
+

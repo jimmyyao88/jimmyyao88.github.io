@@ -1,0 +1,11 @@
+---
+layout: post
+title: Work ／ ワークス ／ 作品
+permalink: /work/
+desc: coding works, and projects
+---
+
+<ul class=al>
+{% for post in site.categories.work %}<li><img src="{{ site.file }}/{% if post.thumb %}{{ post.thumb }}{% else %}na.png{% endif %}" alt="{{ post.title }}"><a href={{ post.presentation }}>{{ post.title }}</a></li>{% endfor %}
+</ul>
+
