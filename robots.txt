@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: http://saito.im/sitemap.xml
+Sitemap: http://jimmyyao.me/sitemap.xml
