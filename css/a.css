@@ -21,7 +21,6 @@
 	font-size: 14px;
 	font-family: Arvo, helvetica, arial;
 	line-height: 1.7;
-	max-width: 960px;
 	margin: 0 auto;
 	padding: 50px 110px;
 	-webkit-animation: wrap 1.2s ease;
@@ -95,7 +94,7 @@ h1:before {
 
 h2, h2 a, footer, footer a,
 nav:nth-of-type(2) {
-	color: #FF005E;
+	color: #3FD86A;
 	font-size: 10px;
 	font-weight: bold;
 	font-style: normal;
