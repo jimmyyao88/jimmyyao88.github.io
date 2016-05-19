@@ -6,4 +6,4 @@ this is a personal blog.
 Author
 ======
 
-Saito saitowu@gmail.com
+Jimmy rollingdog@163.com
